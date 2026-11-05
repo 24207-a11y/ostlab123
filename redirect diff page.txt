@@ -1,0 +1,49 @@
+vote.php
+
+<html>
+<head>
+<title>voter portal </title>
+</head>
+<body align="center">
+<h1>voter portal</h1>
+<form action="reg.php" method ="post">
+enter your name:<input type="text" name="name" placeholder="your name" required><br>
+enter your voter id:<input type="text" name="id" placeholder="voter id number" required><br>
+enter your constituency:<input type="text" name="constituency" placeholder="your constituency" required><br>
+<input type="submit"value="submit" name="submitButton">
+<input type="reset" value="reset">
+</form>
+</body>
+</html>
+
+
+reg.php 
+
+
+<html>
+<?php
+if(isset($_POST['submitButton']))
+{
+$name=$_POST['name'];
+$id=$_POST['id'];
+$constituency=$_POST['constituency'];
+header('Location: success.php');
+}
+else
+{
+echo"ERROR WRONG CREDENTIALS";
+}
+?>
+</html>
+
+
+success.php
+
+<html>
+<body align="center">
+<?php
+echo '<h1>Voter Portal</h1>;
+echo '<h2>Your polling booth number is:</h2>' . rand(10,100);
+?>
+</body>
+</html>

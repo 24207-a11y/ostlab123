@@ -1,0 +1,10 @@
+<!DOCTYPE>
+<html>
+<body style="background-color:black;">
+<?php
+echo "<h2 style='color:white;'>welcome to php</h2>";
+echo "<p style='color:white; font-weight:bold;'>styled text
+example</p";
+?>
+</body>
+</html>

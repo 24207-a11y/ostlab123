@@ -1,0 +1,77 @@
+<html>
+<body align="center">
+<h1>Address Collection</h1>
+<form action="contact_card.php" method="post">
+Name: <input type="text" name="name"><br><br>
+Email: <input type="text" name="email"><br><br>
+Phone: <input type="text" name="phone"><br><br>
+Address: <input type="text" name="address"><br><br>
+<input type="submit">
+</form>
+</body>
+</html>
+
+
+<?php
+// Start the session
+session_start();
+
+// Check if form was submitted
+if (isset($_POST["delete"])) {
+
+    // Delete contact details from session
+    unset($_SESSION["name"]);
+    unset($_SESSION["email"]);
+    unset($_SESSION["phone"]);
+    unset($_SESSION["address"]);
+
+} 
+// Check if the Address Collection form was submitted
+elseif ($_SERVER["REQUEST_METHOD"] == "POST") {
+
+    // Store form data in session
+    $_SESSION["name"] = $_POST["name"];
+    $_SESSION["email"] = $_POST["email"];
+    $_SESSION["phone"] = $_POST["phone"];
+    $_SESSION["address"] = $_POST["address"];
+}
+?>
+<!DOCTYPE html>
+<html>
+<body>
+
+<?php if (isset($_SESSION["name"])): ?>
+<h2>Contact Card</h2>
+
+<table>
+<tr>
+<td>Name:</td>
+<td><?php echo $_SESSION["name"]; ?></td>
+</tr>
+<tr>
+<td>Email:</td>
+<td><?php echo $_SESSION["email"]; ?></td>
+</tr>
+<tr>
+<td>Phone:</td>
+<td><?php echo $_SESSION["phone"]; ?></td>
+</tr>
+<tr>
+<td>Address:</td>
+<td><?php echo $_SESSION["address"]; ?></td>
+</tr>
+</table>
+
+<form method="post">
+<input type="submit" name="delete" value="Delete Card">
+</form>
+
+<?php else: ?>
+
+<p>No contact card found.</p>
+
+<?php endif; ?>
+
+</body>
+</html>
+

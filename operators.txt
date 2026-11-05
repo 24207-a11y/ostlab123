@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>implementing a variables</title>
+</head>
+<body>
+<?php
+$t="open source tech-html program";
+$x=100;
+$y=200;
+echo "the variable of txt is:".$t;
+echo "<br>";
+echo "the variable of x is :".$x;
+echo "<br>";
+echo "the variable of y is".$y;
+echo "<br>";
+echo "the sum of 2 digits:", $c=$x+$y;
+echo "<br>";
+echo "the difference of 2 digits:", $c=$x-$y;
+echo "<br>";
+echo "the product of 2 digits:", $c=$x*$y;
+echo "<br>";
+echo "the divisionof 2 digits:", $c=$x/$y;
+echo "<br>";
+?>
+</body>
+</html>

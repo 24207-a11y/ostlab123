@@ -1,0 +1,37 @@
+!DOCTYPE html>
+<?php
+if(isset($_POST['submit'])) {
+$cookie_name1="username";
+$cookie_value1=$_POST['username'];
+$cookie_name2="email";
+$cookie_value2=$_POST['email'];
+setcookie($cookie_name1,$cookie_value1, time()+10,"/");
+setcookie($cookie_name2,$cookie_value2, time()+10,"/");
+}
+?>
+
+<!DOCTYPE html>
+<html>
+<body align="center">
+
+<?php
+if(isset($_COOKIE['username'])&&isset($_COOKIE['email'])) {
+echo "Username:".$_COOKIE['username']."<br>";
+echo "Email:".$_COOKIE['email'];
+}else{
+?>
+
+<form method="post">
+<label for="username">Username:</label>
+<input type="text" id="username" name="username"><br><br>
+<label for="email">Email:</label>
+<input type="text" id="email" name="email"><br><br>
+<input type="submit" name="submit" value="submit">
+</form>
+
+<?php
+}
+?>
+
+</body>
+</html>

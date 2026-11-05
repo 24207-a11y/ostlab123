@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head><title>String Manipulation</title></head>
+<center><body>
+<form action = "" method="post">
+<label for="inputString">Enter a String:</label><br>
+<input type="text" id="inputString" name="inputString"><br><br>
+<input type="submit" value="Submit">
+</form>
+<?php
+function is_lowercase($inputString)
+{
+return ctype_lower($inputString);
+}
+if($_SERVER["REQUEST_METHOD"]=="POST")
+{
+$inputString=$_POST["inputString"];
+if(is_lowercase($inputString))
+{
+echo"The string \"$inputString\" is lower case only";
+}
+else
+{
+echo"The stirng \"$inputString\" is not lower case";
+}
+echo"<h3>Lowercase:" .strtolower($inputString) . "</h3>";
+echo"<h3>uppercase:" .strtoupper($inputString) . "</h3>";
+}
+?>
+</body>
+</html>

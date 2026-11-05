@@ -1,0 +1,16 @@
+<html>
+<head>
+<title>Using Date and Time</title>
+<body align='center'>
+<h1>Using Date and Time</h1>
+<?php
+date_default_timezone_set("Asia/Kolkata");
+echo"Today date is:".date("d/m/y")."<br>";
+echo"Today date is:".date("y-m-d")."<br>";
+echo"Today date is:".date("y.m.d")."<br>";
+echo"Today time is:".date("h/i/s A")."<br>";
+echo"Today time is:".date("h-i-s A")."<br>";
+echo"Today time is:".date("h.i.s A")."<br>";
+?>
+</body>
+</html>

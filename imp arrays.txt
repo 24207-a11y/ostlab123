@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>  
+ <title> Implementing Arrays </title>
+</head>
+<body style="background-color:lightgreen;">
+<?php 
+echo "<h2 style='color:blue;'>Implementing Array</h2>";
+ $cars=array("volvo","BMW","Toyota");
+ echo "Element of cars-array index[0]:".$cars[0]."<br>";
+ echo "Element of cars-array index[1]:".$cars[1]."<br>";
+ echo "Element of cars-array index[2]:".$cars[2]."<br>";
+?>
+</body>
+</html>
+

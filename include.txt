@@ -1,0 +1,38 @@
+<html>
+<head>
+<title> Include and Require Example </title>
+</head>
+<body align="center">
+<?php
+include 'var1.php';
+echo "<br><b> This is code also executed</b></br>";
+echo "<br>";
+echo 'first Adding the number 5 and 7';
+include 'var.php';
+echo 'This time adding the number 3 and 2';
+include 'var2.php';
+?>
+</body>
+</html>
+
+
+<html>
+<body>
+<?php
+$x=5;
+$y=7;
+echo  "<h2 style='color:red'>Addition is:".($x +$y)."</h2>";
+?>
+</body>
+</html>
+
+
+<html>
+<body>
+<?php
+$x=3;
+$y=2;
+echo  "<h2 style='color:blue'>Addition is:".($x +$y)."</h2>";
+?>
+</body>
+</html>

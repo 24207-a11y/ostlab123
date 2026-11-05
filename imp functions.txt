@@ -1,0 +1,18 @@
+<html>
+<head>
+<title>Implement function</title>
+</head>
+<body>
+<?php
+function familyname($fname)
+{
+echo "$fname used by familyname() function.<br><br>";
+}
+familyname("hari");
+familyname("priya");
+familyname("mini");
+familyname ("prithu");
+familyname("agam");
+?>
+</body>
+</html>

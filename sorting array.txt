@@ -1,0 +1,34 @@
+<html>
+<head>
+<title>Associative Array Sorting</title>
+</head>
+<body align="center">
+<h1>Sorting Associative Arrays</h1>
+<?php
+$pair = array("India" => "Delhi", "Maldives" => "Male", "China" => "Beijing", "Qatar" => "Doha");
+?>
+<form action="" method="post">
+Ascending order : <input type="submit" name="b1" value="Ascending()"><br><br>
+Descending order : <input type="submit" name="b2" value="Descending()"><br><br>
+</form>
+
+<?php
+if(isset($_POST['b1'])){
+    asort($pair);
+    echo "<h1>Sorted Array</h1>";
+    foreach($pair as $country => $capital){
+        echo "Country=" . $country . ", Capital=" . $capital;
+        echo "<br><br>";
+    }
+}
+
+if(isset($_POST['b2'])){
+    arsort($pair);
+    echo "<h1>Sorted Array</h1>";
+    foreach($pair as $country => $capital){
+        echo "Country=" . $country . ", Capital=" . $capital;
+        echo "<br><br>";
+    }
+}
+?>
+</body>

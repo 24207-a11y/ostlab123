@@ -1,0 +1,18 @@
+<html>
+<head>
+<title>implementing echoing variables</title>
+</head>
+<body>
+<?php
+$txt="welcome";
+$x=7;
+$y=8;
+echo"variable txt value is:",$txt;
+echo"<br>";
+echo"value of x  is:",$x;
+echo"<br>";
+echo"value of y is:",$y;
+echo"<br>";
+?>
+</body>
+</html>
